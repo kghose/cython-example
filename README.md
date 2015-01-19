@@ -58,3 +58,8 @@ My error was that though I had correctly indicated the path to the source (the s
 not given the proper dotted path for the modules themselves. If you look under ``site-packages`` of your installation
 you will note that there are two compiled modules ``cy1.so`` and ``cy2.so`` directly under ``site-packages`` rather than
 in their proper places under ``kgcyex`` and ``kgcyex/lib``. The correct form of this line is ...
+
+#ex4
+
+    extensions = [Extension("kgcyex.cy1", ["kgcyex/cy1"+ext]), Extension("kgcyex.lib.cy2", ["kgcyex/lib/cy2"+ext])]
+    
