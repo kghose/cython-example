@@ -3,7 +3,7 @@ from Cython.Build import cythonize
 
 setup(
     name='kgcyex',
-    version='1.0.0',
+    version='1.0.1',
     packages=['kgcyex', 'kgcyex.lib'],
     entry_points={
       # Command line scripts
@@ -12,6 +12,5 @@ setup(
     install_requires=[
       'setuptools>=0.7',
     ],
-    ext_modules=cythonize(['cy1.pyx', 'lib/cy2.pyx']),
-    test_suite='nose.collector'
+    ext_modules=cythonize(['kgcyex/cy1.pyx', 'kgcyex/lib/cy2.pyx'])
 )
